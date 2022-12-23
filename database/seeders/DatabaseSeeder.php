@@ -21,9 +21,6 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-<<<<<<< HEAD
-=======
         $this->call(UserTableSeeder::class);
->>>>>>> f92fdc59ac86dcd227e3ec0de420bd919eb0285f
     }
 }
