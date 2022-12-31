@@ -47,11 +47,6 @@ class Login extends Component
                 ]);
             }
 
-
-
-
-
-
         } catch (\Exception $e) {
             $this->alert('error', 'Something Wrong, please try again later!', [
                 'position' => 'top-end',
