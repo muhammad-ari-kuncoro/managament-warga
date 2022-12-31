@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Admin\Home;
+use App\Http\Livewire\Auth\Login;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,4 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome')->name('home');
+Route::redirect('/', '/auth/login', 301);
+
+Route::prefix('auth')->group(function() {
+    Route::name("auth.")->group(function() {
+        Route::get("login", Login::class)->name('login');
+    });
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::prefix('admin')->group(function() {
+        Route::name("admin.")->group(function() {
+            Route::get("/", Home::class)->name('home');
+        });
+    });
+});
