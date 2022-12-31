@@ -18,7 +18,6 @@
 
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @livewireStyles
-        @livewireScripts
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -26,5 +25,12 @@
 
     <body>
         @yield('body')
+
+        @livewireScripts
+
+        <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false" data-turbo-eval="false"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <x-livewire-alert::scripts />
     </body>
 </html>
