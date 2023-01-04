@@ -1,4 +1,4 @@
-<div style="margin-top: -9px"
+<div style="margin-top: -10px"
     class="fixed shadow-lg h-50 drawer"
     x-show='drawer'
     x-transition:enter.duration.500ms

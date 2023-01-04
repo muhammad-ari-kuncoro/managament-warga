@@ -4,7 +4,7 @@
     <div class="drawer-content" x-data="{ drawer: false }">
 
         @livewire('admin.components.navbar')
-        @livewire('admin.components.sidebar')
+        @include('livewire.admin.components.sidebar')
 
 
        <div class="px-5" :class="{ 'lg:mx-80 lg:p-5': drawer }">
